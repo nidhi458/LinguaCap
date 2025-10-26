@@ -1,45 +1,30 @@
 # LinguaCap
 
-**Understand any video, in any language — live.**
+Auto-generated subtitles for any video — even when none exist.
 
-LinguaCap is a Chrome extension that listens to the audio of any tab (e.g., YouTube, Dailymotion) and generates real-time subtitles using AI speech recognition and translation.
+## 🚀 Overview
+LinguaCap is a Chrome extension that listens to video audio (like from Dailymotion, Vimeo, etc.), generates real-time subtitles using AI, and optionally translates them into your preferred language.
 
-## 🚀 Problem
+## ✨ Features
+- 🗣️ Real-time speech-to-text subtitles
+- 🌍 Auto-translate into English or other languages
+- 🎞️ Works on any HTML5 video player
+- 🧠 Offline caching for better performance
+- 🔒 User data privacy — nothing stored on external servers
 
-Ever watched a video with no subtitles or in another language?
-Existing tools either require you to find `.srt` files or rely on limited site support. 
-LinguaCap solves this by adding *live AI-powered subtitles* directly in your browser.
+## 🛠️ Tech Stack
+- JavaScript (Chrome Extension API)
+- Web Speech API / Whisper API for STT
+- Manifest V3
+- Tailwind (optional for popup UI)
 
-## ⚙️ How It Works
-1. Capture tab audio using Chrome’s tabCapture API.
-2. Stream audio to an AI Speech-to-Text engine (OpenAI Whisper / Deepgram).
-3. Translate text to your target language.
-4. Overlay live captions directly on the video.
-
-## 🧩 Tech Stack
-- **Frontend:** Vanilla JS + HTML + CSS (Chrome Extension)
-- **Backend (optional):** Node.js for API key protection and WebSocket streaming
-- **AI APIs:** 
-  - Whisper API (Speech-to-Text)
-  - Google Translate API (Translation)
-
-## 🛠️ Current MVP Goals
-- [ ] Capture tab audio and chunk it in real-time
-- [ ] Send to Whisper API and get transcripts
-- [ ] Display subtitles overlay on active tab
-- [ ] Translate to English
-- [ ] Basic styling + on/off controls
-
-## 🔮 Future Roadmap
-- Multi-language support
-- Offline transcription (Whisper Tiny WASM)
-- Custom subtitle styling
-- Save subtitles as `.srt`
-- Freemium monetization model
+## 📦 Installation (Developer Mode)
+1. Clone the repo
+2. Go to `chrome://extensions`
+3. Enable **Developer Mode**
+4. Click **Load unpacked** and select your project folder
+5. Open a Dailymotion video → activate LinguaCap → watch subtitles appear 🎬
 
 ## 📜 License
-MIT License
+Licensed under the [MIT License](./LICENSE)
 
----
-
-*Built by Nidhi — solving real problems with real code.*
